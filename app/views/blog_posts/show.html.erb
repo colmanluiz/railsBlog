@@ -1,2 +1,3 @@
 <h1><%= @blog_post.title %></h1>
+<%= link_to "Edit post", edit_blog_post_path(@blog_post) if user_signed_in? %>
 <p><%= @blog_post.body %></p>
