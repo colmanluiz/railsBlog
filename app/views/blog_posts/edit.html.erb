@@ -1,0 +1,6 @@
+<h1> Edit Blog Post </h1>
+<h2><%= @blog_post.title %></h2>
+<p><%= @blog_post.body %></p>
+
+<%= render partial: "form", locals: {blog_post: @blog_post} %>
+<%= button_to "Delete", @blog_post, method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
